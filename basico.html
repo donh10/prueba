@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Fundamentos javascript</h1>
+</body>
+<script>
+
+//funcion declarada
+function prueba(){
+
+    console.log('1');
+    console.log('2');
+    console.log('3');
+
+
+}
+
+//invocacion de funcion
+//prueba()
+
+function devuelve(){
+    return "chivola"
+}
+
+let hola = devuelve();
+
+//console.log(hola);
+
+//if else//
+let edad = 20;
+
+/*if(edad >= 17){
+console.log("Mayor de Edad");
+}else{
+console.log("Menor de Edad")
+}*/
+
+// let hora = 20;
+
+// if(hora >= 0 && hora <=5){
+//     console.log("DEJEN DORMIR");
+// }else if(hora >= 6 && hora <=11){
+//     console.log("Dias");
+// }else if(hora >= 12 && hora <=18){
+//     console.log("Tardes");
+// }else{
+//     console.log("Noches");
+// }
+
+/*Operador ternario (condicion) ? verdadero : falsa */
+// console.log("operador ternario");
+// let eresMayor = (edad >= 18)? "eres mayor":
+// "eres menor";
+// console.log(eresMayor);
+
+// switch-case
+// let dia = 0;
+
+// switch(dia){
+//     case 0:
+//     console.log("Domingo");
+//     break;
+//     case 1:
+//     console.log("Lunes");
+//     break;
+//     case 2:
+//     console.log("Martes");
+//     break;
+//     case 3:
+//     console.log("Miercoles");
+//     break;
+//     case 4:
+//     console.log("Jueves");
+//     break;
+//     case 5:
+//     console.log("Viernes");
+//     break;
+//     case 6:
+//     console.log("Sabado");
+//     break;
+//     default:
+//     console.log("No EXISTE")
+//     break;
+    
+// }
+
+let contador = 0;
+
+// while(contador < 10){
+//     console.log(contador);
+//     contador ++;
+// }
+
+// do{
+//   console.log(contador); 
+//   contador ++; 
+// }while (contador < 10);
+
+// for(let i=0; i < 10; i++){ 
+//     console.log("for" + i);
+// }
+
+// let numeros = [10,20,30,40,50,60,70,80,90,100];
+// for(let i=0; i < numeros.length; i++){ 
+//     console.log(numeros[i]);
+// }
+
+// const donh = {
+//     nombre:"Helmer",
+//     apellido: "Calix",
+//     edad: 28
+// }
+
+// // for (const propiedad in donh) {
+// //     console.log(`Key:${propiedad},Value: ${donh[propiedad]}`);
+// // }
+
+// // for (const elemento of numeros) {
+// //     console.log(elemento);
+// // }
+
+// // let cadena = "Hola Mundo";
+
+// // for (const caracter of cadena) {
+// //     console.log(caracter);
+// // }
+
+// // try{
+// //     console.log("codigo a evaluar");
+// // }catch(error){
+// //     console.log("captura el error");
+// // }finally{
+// //     console.log("se ejecuta al final del bloque");
+// // }
+
+// // try {
+// //     let numero = 10;
+// //     if(isNaN(numero)){
+// //         throw new Error("El caracter introducido no es numero");
+// //     }
+
+// //     console.log(numero*numero);
+// // } catch (error) {
+// //     console.log(`Se produjo el error: ${error}`);
+// // }
+
+// // 
+
+// const numeros= [1,2,3,4];
+// //sin destructuracion
+// let uno = numeros[0];
+
+// console.log(uno);
+
+// //con destructuracion
+// const [one] = numeros;
+
+// console.log(one);
+
+// const persona = {
+//     nombre: "Helmer",
+//     apellido: "Calix",
+//     edad1: 35
+// }
+
+// let {nombre,apellido,edad1} = persona;
+// console.log(nombre,apellido,edad1);
+
+// function sumar(a,b, ...c){
+//     let resultado = a + b;
+
+//     c.forEach(function(n){
+//         resultado += n;
+//     });
+
+//     return resultado;
+// }
+
+// console.log(sumar(1,2));
+// console.log(sumar(1,2,3));
+// console.log(sumar(1,2,3,4));
+
+// const arr1 = [1,2,3,4,5],
+// arr2 = [6,7,8,9,0];
+
+// console.log(arr1,arr2);
+
+// const arr3 = [...arr1,...arr2];
+
+// console.log(arr3);
+
+
+// const saludar = nombre => console.log(`Hola ${nombre}`);
+// saludar("Don H");
+
+// const sumar = (a,b) => a+b;
+// console.log(sumar(9,9));
+
+// const functionvarioaslineas = () =>{
+//     console.log("UNO");
+//     console.log("DOS");
+//     console.log("TRES");
+// }
+
+// functionvarioaslineas();
+
+// const numeros= [1,2,3,4,5];
+// numeros.forEach((el,index)=>
+//     console.log(`${el} esta en la posicion ${index}`));
+
+//funcion constructora
+// function Animal(){
+//     //atributos
+//     this.nombre = nombre;
+//     this.genero = genero;
+
+//     //metodos
+//     this.sonar = function(){
+//         console.log("Hago sonido");
+//     } 
+// }
+
+// const snoopy = new Animal("Snoopy","Macho"),
+// lolaBunny = new Animal("Lola Bunny","Hembra");
+
+// console.log(snoopy);
+// console.log(lolaBunny);
+
+//asignamos los metodos al prototipo
+ function Animal(nombre,genero){
+    //atributos
+    this.nombre = nombre;
+    this.genero = genero;
+
+    
+}
+
+//metodo agregado al prototipo
+Animal.prototype.sonar = function(){
+        console.log("Hago sonido");
+    } 
+
+const snoopy = new Animal("Snoopy","Macho"),
+lolaBunny = new Animal("Lola Bunny","Hembra");
+
+
+//herencia prototipica
+function perro(nombre,genero,tamanio){
+    this.super = Animal;
+    this.super(nombre,genero);
+    this.tamanio = tamanio;
+}
+
+//perro esta heredando de animal
+perro.prototype = new Animal();
+perro.prototype.constructor = perro;
+
+console.log(snoopy);
+console.log(lolaBunny);
+
+snoopy.sonar(); 
+
+</script>
+</html>
